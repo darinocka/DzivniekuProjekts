@@ -1,0 +1,198 @@
+
+* {
+	padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.descriptionTitle {
+	font-family: "Sunday-Regular"; 
+	width: 250px;
+	height: auto;
+	position: absolute;	
+	top: 0;
+	left: 0;
+	margin: 20px;
+	padding: 20px;
+	color: black;
+	box-shadow: 5px 10px rgb(145, 180, 245);
+}
+
+.title {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+	font-family:"Sunday-Regular"; 
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.padd {
+	width: 30px;
+}
+
+body {
+	background-image: url("img/watercolor.jpg");
+    background-size: cover; /* Iztiepj bildi, saglabājot proporcijas */
+    background-position: center; /* Bilde vienmēr centrēta */
+	background-color: #abcbffd3;
+	background-color: #d3efff;
+	font-family: 'BloggersSans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 200px;
+	gap: 30px;
+	min-height: 100vh;
+	overflow: hidden;
+	
+}
+
+.front, .back {
+    background: #3a84ca66;
+    border: 1px solid #6553ed;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	overflow: hidden; /* Noņem iespējamo scroll parādīšanos */
+	}
+
+.front {
+	transform: rotateY(0);
+	z-index: 2 ;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.flip-container:hover .flip{
+ transform: rotateY(180deg);
+
+}
+
+.header-flip {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	gap: 5px;
+	padding: 10px 0;
+
+}
+
+.header-flip .name {
+	font-size: 20px;
+	color:#333;
+}
+
+.lat-name {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.flip-container {
+    perspective: 1000px; /* Nodrošina dziļuma efektu */
+    width: 320px; /* Fiksēts platums */
+    height: 320px; /* Fiksēts augstums */
+	perspective: 1000px;
+    transform-style: preserve-3d; /* Nodrošina, ka abas puses paliek vietā */
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: auto;
+}
+
+.flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out; /* Pievienots vienmērīgums */
+    transform: translateZ(0); /* Novērš vizuālas izmaiņas animācijas laikā */
+}
+
+.img-container {
+    width: 100%;
+    padding-bottom: 100%; /* kvadrāts */
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+
+.flip-btn {
+    background: #3b6fff;
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.header-flip-back {
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+.back-img {
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+}
+
+.info-list a {
+	color:rgb(245, 215, 145);
+
+}
+.info-list span {
+	font-weight: bold;
+}
+
+.description {
+	font-size:15px;
+	padding: 15px 0;
+	text-align: justify;
+	text-indent: 5px;
+	color: #F9F7CD;
+	/*color: rgb(131, 61, 6);*/
+	font-weight: bold;
+}	
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center; /* Kartiņas centrā */
+    flex-wrap: wrap; /* Ja ekrāns ir mazāks, kartiņas pāriet nākamajā rindā */
+    gap: 20px; /* Atstarpes starp kartiņām */
+    padding: 20px;
+}
+
+@font-face {
+	font-family: "Sunday-Regular"; 
+	src: url("./fonts/cd2f1-36d91_sunday.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+} 
+	
