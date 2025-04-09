@@ -1,0 +1,199 @@
+.mainWrapper {
+	width: 100%; /* vai 1000px, vari mainīt */
+}
+
+body {
+	background-image: url("back.jpg"); 
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.indikator {
+	padding: 0;
+	margin: 0;
+	background-color: rgb(209, 180, 136);
+	border-radius: 20%;
+	height: 30px;
+	
+	position: fixed;
+	bottom: 0;
+	left: 0.5%;
+	transform: translateX(-50%);
+  	text-align: center;
+  	line-height: 25px;
+  	font-family: "Sunday-Regular";
+  	-webkit-animation: pulsing 2s infinite;
+  	animation: pulsing 2s infinite;
+}
+
+
+@keyframes pulsing {
+	0%, 100% { transform: scale(0.8); }
+	50% { transform: scale(1.0); }
+}
+  
+.mainDiv {
+	margin: 0 auto;
+	max-height: 30vw;
+	max-width: 30vw;
+	text-align: center;
+	padding: 3vw;
+	border: grey 2px solid;
+	background-color: silver;
+}
+
+.img {
+    width: 28vw;
+    height: 28vw;
+    max-width: 85vw;
+    max-height: 75vh;
+    margin: 1vw;
+    border-radius: 10%;
+}
+
+.nameDiv {
+	font-size: 4.2vw;
+	font-family: "Sunday-Regular";
+	padding-top: 0.9rem;
+	padding-left: 0;
+	text-align: left;
+}
+
+.content {
+	display: flex;
+	align-items: flex-start;
+}
+
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	padding-left: 2vw; /* bija 30px */
+	width: 100%;
+
+	min-height: 25vh;    /* bija 300px */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+.descriptionDiv {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.25rem; /* bija 20px (1rem ≈ 16px) */
+	margin-left: auto;
+	padding-right: 5vw;  /* bija 80px */
+	padding-top: 19vh;    
+	max-width: 45vw;     /* bija 650px */
+	text-align: left;
+}
+
+
+
+#animalTranslationID {
+    font-family: "Sunday-Regular";
+	font-size: 1.3vw;
+    color: #444;
+	margin-top: 1vw;
+	margin-right: auto;
+	padding-left: 18vw;
+}
+
+
+.inputBtn {
+	width: 15vw;
+	height: 2vw;
+	text-align: center;
+	font-size: 1vw;
+	font-family: "Sunday-Regular";
+	color: rgb(159, 104, 36);
+	border-radius: 7px;
+	border: 0.2vw solid rgb(165, 103, 44);
+}
+
+
+
+.submitContent {
+	text-align: center;
+	position: fixed;
+    bottom: 10vw; /* attālums no apakšas */
+    left: 50%; 
+    transform: translateX(-50%); /* centrēšana */
+}
+
+
+.back {
+	position: fixed;
+    bottom: 2.5vw; /* attālums no apakšas */    
+    z-index: 1000; /* nodrošina, ka ir virs citiem elementiem */
+}
+
+.back-btn {
+    border-color: #d1b899;
+    color: #695539;
+    box-shadow: 0 0 2.5rem 2.5rem #c49861ac inset, 0 0 0 0 #c49861ac; /* 40px → 2.5rem */
+    transition: all 0.15s ease-in-out; /* 150ms → 0.15s */
+    border-radius: 1.375rem; /* 22px → 1.375rem */
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem; /* 24px → 1.5rem */
+    padding: 0.625rem 1.25rem; /* 10px 20px → 0.625rem 1.25rem */
+    font-family: "Sunday-Regular";
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.back-btn:hover {
+    box-shadow: 0 0 0.625rem 0 #886a44 inset, 0 0 0.625rem 0.25rem #886a44; /* 10px → 0.625rem, 4px → 0.25rem */
+}
+
+
+.Buttons{
+	margin-left: auto;
+	padding-right: 13vw;
+}
+
+
+.Sound{
+	width: 5.5vw;
+	height: 5.5vw;
+	background: none;
+	border: none;
+}
+
+.translate{
+	background: none;
+	border: none;
+}
+
+
+.icon{
+	color: rgb(162, 133, 89);;
+}
+
+  
+@font-face {
+  font-family: "Sunday-Regular" ; 
+  src: url("../fonts/cd2f1-36d91_sunday.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+  
+@font-face {
+  font-family: "TeddyBear" ; 
+  src: url("../fonts/teddy-bear.ttf") format("truetype"); 
+  font-style: italic; 
+  font-weight: normal; 
+} 
+  
+  

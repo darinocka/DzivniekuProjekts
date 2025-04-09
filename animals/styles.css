@@ -1,0 +1,183 @@
+.mainWrapper {
+	width: 100%; /* vai 1000px, vari mainīt */
+}
+
+body {
+	background-image: url("back9.jpg"); 
+  	background-position: center center;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+
+.indikator {
+	padding: 0;
+	margin: 0;
+	background-color: rgb(149, 180, 202);
+	border-radius: 20%;
+	height: 30px;
+	position: absolute;
+	position: fixed;
+	bottom: 0;
+	left: 0.5%;
+  	text-align: center;
+  	line-height: 25px;
+  	font-family: "Sunday-Regular";
+  	-webkit-animation: pulsing 2s infinite;
+  	animation: pulsing 2s infinite;
+}
+
+
+@keyframes pulsing {
+	0%, 100% { transform: scale(0.8); }
+	50% { transform: scale(1.0); }
+}
+
+.mainDiv {
+	margin: 0 auto;
+	max-height: 250px;
+	max-width: 250px;
+	text-align: center;
+	padding: 50px;
+	border: grey 2px solid;
+	background-color: silver;
+}
+
+.img {
+    width: 28vw;
+    height: 28vw;
+    max-width: 85vw;
+    max-height: 75vh;
+    margin: 1vw;
+    border-radius: 10%;
+}
+
+
+.lastImg {
+    width: 100%;
+    max-width: 100%;
+    height: 75vh;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.nameDiv {
+	font-size: 4.2vw;
+	font-family: "Sunday-Regular";
+	padding-top: 0.9rem;
+	padding-left: 0;
+	text-align: left;
+}
+
+.result {
+    margin-right: 6vw; /* 20px → 6% no ekrāna platuma */
+    width: 34vw; /* 550px → 34% no ekrāna platuma */
+    height: auto;
+    font-family: "TeddyBear";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 23vh; /* 180px → 22.5% no ekrāna augstuma */
+    padding-right: 20vw; /* 200px → 20% no ekrāna platuma */
+    color: black;
+    font-size: 2.5vw; 
+    transform: rotate(-8deg);
+    
+}
+
+.content {
+	display: flex;
+	align-items: flex-start;
+}
+
+.input {
+    color: red;
+    font-size: 1.25rem; /* 20px → 1.25rem pieņemot 1rem = 16px */
+    border-radius: 0.4375rem; /* 7px → 0.4375rem */
+    border: 0.125rem solid purple; /* 2px → 0.125rem */
+}
+
+.inputBtn {
+    width: 6.875rem; /* 110px → 6.875rem */
+    height: 1.375rem; /* 22px → 1.375rem */
+    text-align: center;
+}
+
+.whatToDo {
+	color: ghostwhite;
+	font-style: italic;
+}
+
+.hiden {
+	display: none;
+}
+
+
+.go-btn {
+    border-color: #d1b899;
+    box-shadow: 0 0 2.5rem 2.5rem #96b4d2 inset, 0 0 0 0 #96b4d2;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    border-radius: 1.375rem; /* 22px → 1.375rem */
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 3.125rem; /* 50px → 3.125rem */
+    padding: 3.125rem 1.25rem; /* 50px 20px → 3.125rem 1.25rem */
+    margin: 0.625rem 1.25rem; /* 10px 20px → 0.625rem 1.25rem */
+    font-family: "Sunday-Regular";
+    text-decoration: none;
+
+    position: fixed;
+    width: 95%;
+    left: 49%;
+    bottom: 0.9vw; /* attālums no apakšas */
+    transform: translateX(-50%); /* centrēšana */
+}
+
+.go-btn:hover {
+    box-shadow: 0 0 0.625rem 0 #96b4d2 inset, 0 0 0.625rem 0.25rem #96b4d2;
+}
+
+.submitContent {
+	text-align: center;
+}
+
+.statusBox {
+    position: absolute;
+    top: 0.9375rem; /* 15px → 0.9375rem */
+    right: 1.875rem; /* 30px → 1.875rem */
+    background-color: rgba(156, 209, 255, 0.788);
+    padding: 0.9375rem 1.25rem; /* 15px 20px → 0.9375rem 1.25rem */
+    border-radius: 0.75rem; /* 12px → 0.75rem */
+    font-family: "Sunday-Regular";
+    text-align: center;
+    box-shadow: 0.5rem 0.375rem 0.5rem rgba(0, 0, 0, 0.699);
+    z-index: 100;
+}
+
+#dateTime, #playTime {
+    font-size: 1.25rem; /* 20px → 1.25rem */
+    color: #303135;
+}
+
+
+
+@font-face {
+font-family: "Sunday-Regular" ; 
+src: url("../fonts/cd2f1-36d91_sunday.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+
+@font-face {
+font-family: "TeddyBear" ; 
+src: url("../fonts/teddy-bear.ttf") format("truetype"); 
+font-style: italic; 
+font-weight: normal; 
+} 
